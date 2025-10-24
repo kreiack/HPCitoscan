@@ -1,0 +1,456 @@
+/**
+ * CitoScan - Sistema de Animaciones
+ * Keyframes, transiciones y efectos visuales
+ */
+
+/* ========================================
+   ANIMACIONES DE ENTRADA
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ========================================
+   ANIMACIONES DE NÚMEROS (Counter)
+   ======================================== */
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   ANIMACIONES CONTINUAS (Loop)
+   ======================================== */
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ========================================
+   ANIMACIONES DE PROGRESO
+   ======================================== */
+
+@keyframes progressBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width, 100%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   CLASES DE ANIMACIÓN APLICABLES
+   ======================================== */
+
+/* Fade animations */
+.animate-fade-in {
+  animation: fadeIn var(--duration-normal) var(--ease-out) forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp var(--duration-normal) var(--ease-out) forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown var(--duration-normal) var(--ease-out) forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft var(--duration-normal) var(--ease-out) forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight var(--duration-normal) var(--ease-out) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--duration-normal) var(--ease-out) forwards;
+}
+
+/* Continuous animations */
+.animate-pulse {
+  animation: pulse var(--duration-slower) var(--ease-in-out) infinite;
+}
+
+.animate-float {
+  animation: float 3s var(--ease-in-out) infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* ========================================
+   DELAYS PROGRESIVOS
+   ======================================== */
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-900 { animation-delay: 900ms; }
+.delay-1000 { animation-delay: 1000ms; }
+
+/* ========================================
+   ESTADOS DE ANIMACIÓN DEL SLIDE
+   ======================================== */
+
+/* Estado inicial de elementos animados */
+.slide [class*="animate-"] {
+  opacity: 0;
+}
+
+/* Cuando el slide está activo, las animaciones se ejecutan */
+.slide.active [class*="animate-"] {
+  opacity: 1;
+}
+
+/* ========================================
+   EFECTOS DE HOVER ESPECIALES
+   ======================================== */
+
+.hover-lift {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.hover-glow {
+  transition: box-shadow var(--transition-base);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(30, 58, 138, 0.4);
+}
+
+.hover-scale {
+  transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   ANIMACIONES DE LOADING
+   ======================================== */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-gray-200) 0%,
+    var(--color-gray-100) 50%,
+    var(--color-gray-200) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.spinner {
+  border: 3px solid var(--color-gray-200);
+  border-top-color: var(--color-primary-600);
+  border-radius: var(--border-radius-full);
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+
+/* ========================================
+   TRANSICIONES DE SLIDES
+   ======================================== */
+
+/* Slide entrante desde la derecha */
+.slide-enter-right {
+  animation: slideInRight var(--slide-transition-duration) var(--slide-transition-timing) forwards;
+}
+
+/* Slide entrante desde la izquierda */
+.slide-enter-left {
+  animation: slideInLeft var(--slide-transition-duration) var(--slide-transition-timing) forwards;
+}
+
+/* ========================================
+   ANIMACIONES DE NÚMEROS Y MÉTRICAS
+   ======================================== */
+
+.metric-number {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-6xl);
+  color: var(--color-primary-600);
+  animation: countUp var(--duration-slow) var(--ease-out) forwards;
+}
+
+/* ========================================
+   ANIMACIONES SVG
+   ======================================== */
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.svg-draw-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 2s var(--ease-smooth) forwards;
+}
+
+@keyframes fillIn {
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 1;
+  }
+}
+
+.svg-fill-in {
+  fill-opacity: 0;
+  animation: fillIn var(--duration-slow) var(--ease-out) forwards;
+  animation-delay: 0.5s;
+}
+
+/* ========================================
+   EFECTO DE TYPING (Máquina de escribir)
+   ======================================== */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid var(--color-primary-600);
+  white-space: nowrap;
+  animation:
+    typing 3s steps(40, end),
+    blink 0.75s step-end infinite;
+}
+
+/* ========================================
+   PARTÍCULAS Y EFECTOS DECORATIVOS
+   ======================================== */
+
+@keyframes particle-float-1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(50px, -50px) rotate(180deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes particle-float-2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-30px, -70px) rotate(-180deg);
+    opacity: 0.6;
+  }
+}
+
+.particle {
+  position: absolute;
+  border-radius: var(--border-radius-full);
+  pointer-events: none;
+}
+
+.particle-1 {
+  animation: particle-float-1 6s ease-in-out infinite;
+}
+
+.particle-2 {
+  animation: particle-float-2 8s ease-in-out infinite;
+}
+
+/* ========================================
+   REVELAR CON MÁSCARA
+   ======================================== */
+
+@keyframes reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.reveal-mask {
+  animation: reveal var(--duration-slow) var(--ease-smooth) forwards;
+}
+
+/* ========================================
+   PERFORMANCE: Optimización GPU
+   ======================================== */
+
+.gpu-accelerate {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* ========================================
+   REDUCE MOTION (Accesibilidad)
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

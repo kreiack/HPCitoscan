@@ -1,0 +1,703 @@
+/**
+ * CitoScan - Sistema de Tipografía
+ * Clases reutilizables para toda la presentación
+ */
+
+/* ========================================
+   TÍTULOS PRINCIPALES
+   ======================================== */
+
+/* Título hero de portada */
+.main-title {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+/* Títulos principales de slides */
+.slide-title {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-2);
+}
+
+/* Título grande (para CTA y slides especiales) */
+.slide-title-large {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-3);
+}
+
+/* Título mediano */
+.slide-title-medium {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary-700);
+  margin-bottom: var(--space-3);
+}
+
+/* ========================================
+   SUBTÍTULOS
+   ======================================== */
+
+/* Subtítulo principal */
+.slide-subtitle {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-4);
+}
+
+/* Subtítulo grande */
+.slide-subtitle-large {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-700);
+  margin-bottom: var(--space-4);
+}
+
+/* Subtítulo pequeño */
+.slide-subtitle-small {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-3);
+}
+
+/* ========================================
+   TÍTULOS DE SECCIÓN
+   ======================================== */
+
+/* Título de sección (h3) */
+.section-title {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-3);
+}
+
+/* Título de sección grande */
+.section-title-large {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-4);
+}
+
+/* Título de sección mediano (para h4 de 1.5rem) */
+.section-title-medium {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-4);
+}
+
+/* Título de sección pequeño */
+.section-title-small {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-3);
+}
+
+/* ========================================
+   TÍTULOS DE COMPONENTES
+   ======================================== */
+
+/* Título de feature card */
+.feature-title {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+/* Título de card genérico */
+.card-title {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+/* Título de timeline */
+.timeline-title {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1);
+}
+
+/* ========================================
+   TEXTO DE CUERPO
+   ======================================== */
+
+/* Texto base */
+.body-text {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-gray-700);
+}
+
+/* Texto mediano */
+.body-text-medium {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-gray-700);
+}
+
+/* Texto grande */
+.body-text-large {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-gray-700);
+}
+
+/* Descripción de feature */
+.feature-description {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-gray-600);
+}
+
+/* ========================================
+   TEXTO PEQUEÑO
+   ======================================== */
+
+/* Texto pequeño */
+.text-small {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-600);
+}
+
+/* Texto extra pequeño */
+.text-xsmall {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-500);
+}
+
+/* Caption/etiqueta */
+.text-caption {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   NÚMEROS Y ESTADÍSTICAS
+   ======================================== */
+
+/* Número estadístico grande */
+.stat-number {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-2);
+}
+
+/* Número estadístico extra grande */
+.stat-number-large {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-2);
+}
+
+/* Número estadístico mediano */
+.stat-number-medium {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-2);
+}
+
+/* Número estadístico pequeño */
+.stat-number-small {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-2);
+}
+
+/* Números display extra grandes para slides especiales */
+.display-number {
+  font-family: var(--font-secondary);
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-2);
+}
+
+/* Título de CTA grande */
+.cta-title {
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-4);
+}
+
+/* Etiqueta de estadística */
+.stat-label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Descripción de estadística */
+.stat-description {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-500);
+  margin-top: var(--space-1);
+}
+
+/* ========================================
+   PRICING
+   ======================================== */
+
+/* Tier de precio */
+.pricing-tier {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-gray-900);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+}
+
+/* Precio */
+.pricing-price {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1);
+}
+
+/* Moneda de precio */
+.pricing-price-currency {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  vertical-align: super;
+}
+
+/* Período de precio */
+.pricing-period {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-6);
+}
+
+/* Features de pricing */
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-features li {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-gray-700);
+  padding: var(--space-2) 0;
+  padding-left: var(--space-6);
+  position: relative;
+}
+
+.pricing-features li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary-500);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ========================================
+   TIMELINE
+   ======================================== */
+
+/* Número de fase de timeline */
+.timeline-number {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-white);
+}
+
+/* Tiempo de timeline */
+.timeline-time {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Descripción de timeline */
+.timeline-description {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-gray-600);
+}
+
+/* ========================================
+   VARIANTES DE COLOR
+   ======================================== */
+
+/* Texto primario */
+.text-primary {
+  color: var(--color-primary-600) !important;
+}
+
+/* Texto secundario */
+.text-secondary {
+  color: var(--color-secondary-700) !important;
+}
+
+/* Texto accent */
+.text-accent {
+  color: var(--color-accent-600) !important;
+}
+
+/* Texto success */
+.text-success {
+  color: var(--color-success) !important;
+}
+
+/* Texto warning */
+.text-warning {
+  color: var(--color-warning) !important;
+}
+
+/* Texto error */
+.text-error {
+  color: var(--color-error) !important;
+}
+
+/* Texto info */
+.text-info {
+  color: var(--color-info) !important;
+}
+
+/* Texto blanco */
+.text-white {
+  color: var(--color-white) !important;
+}
+
+/* Texto gris oscuro */
+.text-dark {
+  color: var(--color-gray-900) !important;
+}
+
+/* Texto gris medio */
+.text-muted {
+  color: var(--color-gray-600) !important;  /* Cambio de 500 a 600 para mejor contraste */
+}
+
+/* Utilidades de opacidad para texto blanco */
+.text-white-90 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.text-white-85 {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.text-white-95 {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Variantes de color extendidas */
+.text-cyan-700 { color: var(--color-cyan-700) !important; }
+.text-cyan-600 { color: var(--color-cyan-600) !important; }
+.text-cyan-300 { color: var(--color-cyan-300) !important; }
+.text-cyan-200 { color: var(--color-cyan-200) !important; }
+.text-yellow-700 { color: var(--color-yellow-700) !important; }
+.text-yellow-600 { color: var(--color-yellow-600) !important; }
+.text-orange-700 { color: var(--color-orange-700) !important; }
+.text-orange-600 { color: var(--color-orange-600) !important; }
+.text-green-700 { color: var(--color-green-700) !important; }
+.text-green-600 { color: var(--color-green-600) !important; }
+.text-accent-700 { color: var(--color-accent-700) !important; }
+.text-primary-700 { color: var(--color-primary-700) !important; }
+.text-secondary-700 { color: var(--color-secondary-700) !important; }
+
+/* ========================================
+   UTILIDADES TIPOGRÁFICAS
+   ======================================== */
+
+/* Alineación */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Peso de fuente */
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+
+.font-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.font-extrabold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+.font-black {
+  font-weight: var(--font-weight-black);
+}
+
+/* Transformación de texto */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* Decoración */
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-no-underline {
+  text-decoration: none;
+}
+
+/* Espaciado de letras */
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.tracking-normal {
+  letter-spacing: 0;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+/* Truncamiento */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========================================
+   GRADIENTES DE TEXTO
+   ======================================== */
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-secondary {
+  background: linear-gradient(135deg, var(--color-secondary-600) 0%, var(--color-secondary-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-medical {
+  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-secondary-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .slide-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .slide-title-large {
+    font-size: var(--font-size-4xl);
+  }
+
+  .slide-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .slide-subtitle-large {
+    font-size: var(--font-size-xl);
+  }
+
+  .stat-number-large {
+    font-size: var(--font-size-4xl);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-3xl);
+  }
+
+  .pricing-price {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .main-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .slide-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .stat-number-large {
+    font-size: var(--font-size-3xl);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* Clases de color para iconos */
+.icon-primary { color: var(--color-primary-600) !important; }
+.icon-secondary { color: var(--color-secondary-600) !important; }
+.icon-accent { color: var(--color-accent-600) !important; }
+.icon-success { color: var(--color-green-600) !important; }
+.icon-warning { color: var(--color-orange-600) !important; }
+.icon-danger { color: var(--color-accent-600) !important; }
+.icon-info { color: var(--color-cyan-600) !important; }
+.icon-green { color: var(--color-green-600) !important; }
+.icon-orange { color: var(--color-orange-600) !important; }
+.icon-cyan { color: var(--color-cyan-600) !important; }
+.icon-yellow { color: var(--color-yellow-600) !important; }
+
+/* ========================================
+   OPACITY UTILITIES
+   ======================================== */
+
+/* Opacity utilities */
+.opacity-95 { opacity: 0.95 !important; }
+.opacity-90 { opacity: 0.9 !important; }
+.opacity-75 { opacity: 0.75 !important; }
+.opacity-60 { opacity: 0.6 !important; }

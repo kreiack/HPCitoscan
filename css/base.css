@@ -1,0 +1,683 @@
+/**
+ * CitoScan - Estilos Base
+ * Reset, contenedor global, y estilos fundamentales
+ */
+
+/* ========================================
+   RESET Y NORMALIZACIÓN
+   ======================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-gray-900);
+  background-color: var(--color-bg-primary);
+  overflow: hidden; /* Evita scroll durante transiciones */
+}
+
+/* ========================================
+   CONTENEDOR GLOBAL DE PRESENTACIÓN
+   ======================================== */
+
+.presentation-container {
+  position: relative;
+  width: var(--slide-width);
+  height: var(--slide-height);
+  overflow: hidden;
+  background: var(--color-bg-primary);
+}
+
+/* Wrapper de todos los slides */
+.slides-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--slide-transition-duration) var(--slide-transition-timing);
+  will-change: transform;
+}
+
+/* ========================================
+   SLIDE INDIVIDUAL
+   ======================================== */
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: var(--slide-width);
+  height: var(--slide-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--slide-padding);
+  overflow: hidden;
+}
+
+/* Contenedor interno del slide (limita ancho máximo) */
+.slide-content {
+  width: 100%;
+  max-width: var(--slide-max-width);
+  height: 100%;
+  position: relative;
+  z-index: var(--z-index-base);
+}
+
+/* ========================================
+   FONDOS DE SLIDES
+   ======================================== */
+
+.slide-bg-white {
+  background-color: var(--color-bg-primary);
+}
+
+.slide-bg-gray {
+  background-color: var(--color-bg-secondary);
+}
+
+.slide-bg-dark {
+  background-color: var(--color-bg-dark);
+  color: white;
+}
+
+.slide-bg-gradient-medical {
+  background: var(--color-bg-gradient-medical);
+  color: white;
+}
+
+.slide-bg-gradient-1 {
+  background: var(--color-bg-gradient-1);
+  color: white;
+}
+
+.slide-bg-gradient-2 {
+  background: var(--color-bg-gradient-2);
+  color: white;
+}
+
+.slide-bg-gradient-soft {
+  background: linear-gradient(135deg, #f0f7ff 0%, #eefbfc 100%);
+  background-attachment: fixed;
+}
+
+/* Fondo con patrón de puntos */
+.slide-bg-dots {
+  background-color: var(--color-bg-primary);
+  background-image: radial-gradient(var(--color-gray-300) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Fondo con patrón de grid */
+.slide-bg-grid {
+  background-color: var(--color-bg-primary);
+  background-image:
+    linear-gradient(var(--color-gray-200) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-gray-200) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ========================================
+   TIPOGRAFÍA
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+h4 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+p {
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+/* ========================================
+   COMPONENTES COMUNES
+   ======================================== */
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  background-color: var(--color-primary-600);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-700);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary-500);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-600);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-800);
+}
+
+.badge-primary {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+.badge-success {
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+}
+
+.badge-danger {
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-800);
+}
+
+.badge-secondary {
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+}
+
+.badge-accent {
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-800);
+}
+
+/* Badge number styles - Estilos estandarizados para badges num\u00e9ricos */
+.badge-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.badge-number-lg {
+  width: var(--size-badge-lg);
+  height: var(--size-badge-lg);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-black);
+  padding: var(--space-3);
+}
+
+.badge-number-sm {
+  min-width: var(--size-badge);
+  height: var(--size-badge);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-2);
+}
+
+/* Combinaciones de color para badge-number */
+.badge-number.badge-primary {
+  background-color: var(--color-primary-600);
+  color: white;
+}
+
+.badge-number.badge-secondary {
+  background-color: var(--color-secondary-600);
+  color: white;
+}
+
+.badge-number.badge-accent {
+  background-color: var(--color-accent-600);
+  color: white;
+}
+
+.badge-number.badge-cyan {
+  background-color: var(--color-cyan-600);
+  color: white;
+}
+
+.badge-number.badge-green {
+  background-color: var(--color-green-600);
+  color: white;
+}
+
+.badge-number.badge-orange {
+  background-color: var(--color-orange-600);
+  color: white;
+}
+
+.badge-number.badge-yellow {
+  background-color: var(--color-yellow-600);
+  color: white;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ========================================
+   NAVEGACIÓN DE SLIDES
+   ======================================== */
+
+/* Contenedor de controles de navegación */
+.slide-navigation {
+  position: fixed;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-index-navigation);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Botones de navegación */
+.nav-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: var(--color-primary-600);
+  color: white;
+  border-radius: var(--border-radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-button:hover:not(:disabled) {
+  background-color: var(--color-primary-700);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.nav-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Indicadores de progreso (dots) */
+.progress-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.progress-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-gray-300);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.progress-dot.active {
+  background-color: var(--color-primary-600);
+  width: 20px;
+}
+
+.progress-dot:hover {
+  background-color: var(--color-primary-400);
+}
+
+/* Contador de slides */
+.slide-counter {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+  padding: 4px 8px;
+  background-color: var(--color-gray-100);
+  border-radius: var(--border-radius-md);
+}
+
+/* ========================================
+   LAYOUTS ÚTILES PARA SLIDES
+   ======================================== */
+
+/* Layout centrado */
+.slide-layout-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-8);
+}
+
+/* Layout dos columnas */
+.slide-layout-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  height: 100%;
+}
+
+/* Layout título + contenido */
+.slide-layout-title-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  height: 100%;
+}
+
+.slide-title-section {
+  flex-shrink: 0;
+}
+
+.slide-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ========================================
+   UTILIDADES
+   ======================================== */
+
+/* === Text Alignment === */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* === Flex Layout Utilities === */
+
+/* Flexbox básico */
+.flex {
+  display: flex !important;
+}
+
+.flex-col {
+  flex-direction: column !important;
+}
+
+.flex-column {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.flex-row {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+/* Alignment */
+.items-center {
+  align-items: center !important;
+}
+
+.items-start {
+  align-items: flex-start !important;
+}
+
+.items-end {
+  align-items: flex-end !important;
+}
+
+.items-stretch {
+  align-items: stretch !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+/* Combinaciones comunes */
+.flex-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.flex-center-col {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Gap utilities */
+.gap-2 { gap: var(--space-2) !important; }
+.gap-3 { gap: var(--space-3) !important; }
+.gap-4 { gap: var(--space-4) !important; }
+.gap-5 { gap: var(--space-5) !important; }
+.gap-6 { gap: var(--space-6) !important; }
+.gap-8 { gap: var(--space-8) !important; }
+.gap-12 { gap: var(--space-12) !important; }
+
+/* Grid básico */
+.grid {
+  display: grid !important;
+}
+
+/* Flex wrap */
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+/* Flex grow/shrink */
+.flex-1 {
+  flex: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+/* Margin utilities */
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+.mb-12 { margin-bottom: var(--space-12); }
+
+/* ========================================
+   GRID LAYOUT UTILITIES
+   ======================================== */
+
+/* Grid - 2 columnas iguales */
+.grid-2-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ========================================
+   SPACING UTILITIES
+   ======================================== */
+
+/* Centrado horizontal (margin auto) */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================
+   LIST UTILITIES
+   ======================================== */
+
+/* Listas sin estilo */
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ========================================
+   BADGE VARIANTS
+   ======================================== */
+
+/* Badge con inversión de colores (fondo blanco) */
+.badge-number.badge-white-inverse {
+  background: var(--color-white);
+  color: var(--color-primary-600);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .slide {
+    padding: var(--slide-padding-mobile);
+  }
+
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .slide-layout-two-column {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .slide-navigation {
+    bottom: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .nav-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-button svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* ========================================
+   SCROLL SNAP (Alternativa para mobile)
+   ======================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  .slides-wrapper {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slide {
+    scroll-snap-align: start;
+  }
+}
