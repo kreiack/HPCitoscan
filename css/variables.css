@@ -199,11 +199,11 @@
   --font-mono: 'Fira Code', 'Courier New', monospace;
 
   /* Tamaños de fuente */
-  --font-size-xs: 0.75rem;      /* 12px */
-  --font-size-sm: 0.875rem;     /* 14px */
-  --font-size-base: 1rem;       /* 16px */
-  --font-size-lg: 1.125rem;     /* 18px */
-  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-xs: 0.875rem;     /* 14px - aumentado de 12px */
+  --font-size-sm: 1rem;         /* 16px - aumentado de 14px */
+  --font-size-base: 1.0625rem;  /* 17px - aumentado ligeramente de 16px */
+  --font-size-lg: 1.1875rem;    /* 19px - aumentado de 18px */
+  --font-size-xl: 1.3125rem;    /* 21px - aumentado de 20px */
   --font-size-2xl: 1.5rem;      /* 24px */
   --font-size-3xl: 1.875rem;    /* 30px */
   --font-size-4xl: 2.25rem;     /* 36px */
