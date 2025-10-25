@@ -220,16 +220,14 @@ const translations = {
     // Slide 10 - Conclusión
     slide10Title: 'CitoScan',
     slide10Subtitle: 'Transformando el Diagnóstico de Cáncer Cervical con IA',
-    conclusionPrecision: 'Alta Precisión',
-    conclusionPrecisionDesc: 'Sensibilidad >94% validada',
-    conclusionFaster: '60% Más Rápido',
-    conclusionFasterDesc: '4-6 min vs 10-15 min',
-    conclusionExplainable: 'Explicable',
-    conclusionExplainableDesc: 'Heatmaps + Chat IA',
-    contactUs: 'Contáctanos',
-    email: 'contacto@healthpixel.ai',
-    website: 'www.healthpixel.ai',
-    thanks: 'Gracias'
+    finalHighPrecision: 'Alta Precisión',
+    finalHighPrecisionDesc: 'Detección confiable de lesiones precancerosas',
+    finalFaster: 'Más Rápido',
+    finalFasterDesc: 'Optimización significativa del tiempo diagnóstico',
+    finalInterpretable: 'Interpretable',
+    finalInterpretableDesc: 'Visualización clara y razonamiento explicable',
+    finalLocalAI: 'Local AI',
+    finalLocalAIDesc: 'Procesamiento on-premise con privacidad total'
   },
 
   en: {
@@ -448,15 +446,13 @@ const translations = {
     // Slide 10 - Conclusion
     slide10Title: 'CitoScan',
     slide10Subtitle: 'Transforming Cervical Cancer Diagnosis with AI',
-    conclusionPrecision: 'High Precision',
-    conclusionPrecisionDesc: 'Validated >94% sensitivity',
-    conclusionFaster: '60% Faster',
-    conclusionFasterDesc: '4-6 min vs 10-15 min',
-    conclusionExplainable: 'Explainable',
-    conclusionExplainableDesc: 'Heatmaps + AI Chat',
-    contactUs: 'Contact Us',
-    email: 'contact@healthpixel.ai',
-    website: 'www.healthpixel.ai',
-    thanks: 'Thank You'
+    finalHighPrecision: 'High Precision',
+    finalHighPrecisionDesc: 'Reliable detection of precancerous lesions',
+    finalFaster: 'Faster',
+    finalFasterDesc: 'Significant optimization of diagnostic time',
+    finalInterpretable: 'Interpretable',
+    finalInterpretableDesc: 'Clear visualization and explainable reasoning',
+    finalLocalAI: 'Local AI',
+    finalLocalAIDesc: 'On-premise processing with total privacy'
   }
 };
